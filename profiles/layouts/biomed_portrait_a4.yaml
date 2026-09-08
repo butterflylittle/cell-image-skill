@@ -1,0 +1,14 @@
+name: biomed_portrait_a4
+aspect_ratio: "portrait"
+use_for:
+  - anatomy_to_microstructure
+  - cell_centric_mechanism
+  - review_explainer
+margins_pct: 4
+header_height_pct: [6, 9]
+hero_area_pct: [40, 55]
+sidebar_width_pct_each: [15, 22]
+detail_insets_area_pct: [15, 25]
+bottom_summary_height_pct: [8, 15]
+max_main_hues: 5
+recommended_density: D2-D3

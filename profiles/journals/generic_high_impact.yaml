@@ -1,0 +1,8 @@
+id: generic_high_impact
+verified: generic
+background: white
+font_family: [Arial, Helvetica]
+vector_text_preferred: true
+color_blind_safe: true
+single_hero: true
+status: journal_specific_rules_unverified

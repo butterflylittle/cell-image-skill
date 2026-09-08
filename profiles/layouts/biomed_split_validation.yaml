@@ -1,0 +1,10 @@
+name: biomed_split_validation
+aspect_ratio: "4:3 or 16:9"
+use_for:
+  - preparation_plus_validation
+preparation_strip_height_pct: [14, 22]
+validation_height_pct: [74, 82]
+lower_split_ratio: "48:48"
+gutter_pct: [2, 4]
+max_panel_tints: 2
+hero_rule: "same therapeutic/material entity must retain identical visual encoding across preparation, in vitro, and in vivo"

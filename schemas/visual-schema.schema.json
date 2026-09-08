@@ -1,0 +1,402 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scientific Figure Visual Schema",
+  "type": "object",
+  "required": [
+    "core_conclusion",
+    "artifact_purpose",
+    "domain",
+    "figure_type",
+    "reading_order",
+    "zones",
+    "entities",
+    "relations",
+    "visible_text",
+    "forbidden_content",
+    "output_formats",
+    "svg_mode",
+    "layout_profile",
+    "density_level",
+    "design_tokens"
+  ],
+  "properties": {
+    "core_conclusion": {
+      "type": "string",
+      "minLength": 10
+    },
+    "artifact_purpose": {
+      "enum": [
+        "manuscript_figure",
+        "graphical_abstract",
+        "proposal_framework",
+        "presentation_overview",
+        "internal_concept_draft"
+      ]
+    },
+    "domain": {
+      "enum": [
+        "biomedical",
+        "materials_chemistry",
+        "education_social_science",
+        "cs_ai",
+        "adaptive_domain"
+      ]
+    },
+    "figure_type": {
+      "enum": [
+        "mechanism",
+        "graphical_abstract",
+        "technical_route",
+        "research_framework",
+        "experimental_setup",
+        "comparison",
+        "multiscale_zoom",
+        "closed_loop"
+      ]
+    },
+    "target_journal": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "journal_profile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reading_order": {
+      "enum": [
+        "left_to_right",
+        "top_to_bottom",
+        "clockwise",
+        "center_out",
+        "custom"
+      ]
+    },
+    "hero_element": {
+      "type": "string"
+    },
+    "zones": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "role",
+          "content"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "content": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "type",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "evidence": {
+            "enum": [
+              "DEMONSTRATED",
+              "SUPPORTED",
+              "ASSOCIATED",
+              "CONTEXT"
+            ]
+          }
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source",
+          "target",
+          "relation",
+          "evidence"
+        ],
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "activates",
+              "inhibits",
+              "drives",
+              "transports",
+              "releases",
+              "binds",
+              "associates",
+              "feeds_back",
+              "validates",
+              "transforms"
+            ]
+          },
+          "evidence": {
+            "enum": [
+              "DEMONSTRATED",
+              "SUPPORTED",
+              "ASSOCIATED",
+              "CONTEXT"
+            ]
+          },
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "visible_text": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "forbidden_content": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ai_policy_status": {
+      "enum": [
+        "VERIFIED_ALLOWED",
+        "VERIFIED_WITH_DISCLOSURE",
+        "VERIFY_REQUIRED",
+        "NOT_ALLOWED_FOR_FINAL_ARTWORK"
+      ]
+    },
+    "delivery_status": {
+      "enum": [
+        "SUBMISSION_CANDIDATE",
+        "INTERNAL_DESIGN_DRAFT"
+      ]
+    },
+    "output_formats": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "svg",
+          "png",
+          "pdf",
+          "eps",
+          "tiff"
+        ]
+      },
+      "uniqueItems": true,
+      "contains": {
+        "const": "svg"
+      },
+      "minItems": 2
+    },
+    "svg_mode": {
+      "enum": [
+        "vector_native",
+        "hybrid_editable",
+        "vector_reconstructed"
+      ]
+    },
+    "layout_profile": {
+      "type": "string",
+      "enum": [
+        "biomed_landscape_16x9",
+        "biomed_portrait_a4",
+        "biomed_split_validation",
+        "biomed_multiscale_zoom",
+        "custom"
+      ]
+    },
+    "density_level": {
+      "enum": [
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    "design_tokens": {
+      "type": "object",
+      "required": [
+        "aspect_ratio",
+        "outer_margin_pct",
+        "hero_area_pct",
+        "main_hues",
+        "high_saturation_accents",
+        "panel_tints",
+        "title_policy"
+      ],
+      "properties": {
+        "aspect_ratio": {
+          "type": "string"
+        },
+        "outer_margin_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "hero_area_pct": {
+          "type": "number",
+          "minimum": 30,
+          "maximum": 85
+        },
+        "supporting_area_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 45
+        },
+        "main_hues": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "high_saturation_accents": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "panel_tints": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "title_policy": {
+          "enum": [
+            "none",
+            "compact",
+            "educational"
+          ]
+        },
+        "background": {
+          "type": "string"
+        },
+        "text_color": {
+          "type": "string"
+        }
+      }
+    },
+    "composition_lock": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "reference_asset": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bbox_center_tolerance_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "bbox_size_tolerance_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "hero_area_tolerance_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 15
+        },
+        "label_anchor_tolerance_pct": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "arrow_topology_locked": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "enabled",
+        "arrow_topology_locked"
+      ]
+    },
+    "anchor_map": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "bbox": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "center": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "size": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      }
+    }
+  }
+}

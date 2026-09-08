@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scientific Figure Contract",
+  "type": "object",
+  "required": [
+    "core_conclusion",
+    "artifact_purpose",
+    "domain",
+    "figure_type",
+    "required_entities",
+    "required_relations",
+    "forbidden_implications",
+    "visible_text",
+    "output_formats",
+    "svg_mode"
+  ],
+  "properties": {
+    "core_conclusion": {
+      "type": "string"
+    },
+    "results_level_question": {
+      "type": "string"
+    },
+    "artifact_purpose": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "figure_type": {
+      "type": "string"
+    },
+    "target_journal": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "final_size": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reading_order": {
+      "type": "string"
+    },
+    "hero_element": {
+      "type": "string"
+    },
+    "supporting_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "validation_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "context_only": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_implications": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_entities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_relations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "visible_text": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewer_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ai_policy_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "output_formats": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "svg",
+          "png",
+          "pdf",
+          "eps",
+          "tiff"
+        ]
+      },
+      "uniqueItems": true,
+      "contains": {
+        "const": "svg"
+      },
+      "minItems": 2
+    },
+    "svg_mode": {
+      "enum": [
+        "vector_native",
+        "hybrid_editable",
+        "vector_reconstructed"
+      ]
+    }
+  }
+}

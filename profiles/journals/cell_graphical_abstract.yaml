@@ -1,0 +1,12 @@
+id: cell_graphical_abstract
+verified: 2026-09-07
+shape: square
+baseline_pixels: [1200, 1200]
+dpi: 300
+font_family: Arial
+font_pt: [12, 16]
+single_panel: true
+reading_order: [left_to_right, top_to_bottom]
+text_density: low
+avoid: [data_items, clutter, saturated_primary_colors]
+ai_artwork_status: verify_journal_specific

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cell-image.local/schemas/text-manifest.schema.json",
+  "title": "Cell Image Text Manifest",
+  "type": "object",
+  "required": ["schema_version", "source_canvas", "text_elements"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "source_canvas": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": {"type": "number", "exclusiveMinimum": 0},
+        "height": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "text_elements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "content", "source_bbox", "x", "y"],
+        "properties": {
+          "id": {"type": "string"},
+          "content": {"type": "string"},
+          "source_bbox": {
+            "type": "array", "minItems": 4, "maxItems": 4,
+            "items": {"type": "number"}
+          },
+          "x": {"type": "number"},
+          "y": {"type": "number"},
+          "font_size": {"type": ["number", "null"]},
+          "font_family": {"type": ["string", "null"]},
+          "font_weight": {"type": ["string", "number", "null"]},
+          "fill": {"type": ["string", "null"]},
+          "text_anchor": {"enum": ["start", "middle", "end"]},
+          "rotation": {"type": "number"},
+          "paint_order": {"type": "integer"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

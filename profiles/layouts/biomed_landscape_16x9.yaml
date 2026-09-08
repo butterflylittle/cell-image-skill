@@ -1,0 +1,19 @@
+name: biomed_landscape_16x9
+aspect_ratio: "16:9"
+use_for:
+  - mechanism
+  - graphical_abstract
+  - closed_loop
+  - educational_explainer
+margins_pct: 4
+title_height_pct:
+  manuscript: 0
+  graphical_abstract: 6
+  educational: 8
+hero_area_pct: [55, 72]
+supporting_area_pct: [15, 28]
+footer_max_height_pct: 8
+recommended_zones: [3, 5]
+max_main_hues: 5
+max_high_saturation_accents: 2
+reading_order_default: left_to_right

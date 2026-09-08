@@ -1,0 +1,65 @@
+name: cell-image
+version: 2.4.0
+
+always_load:
+  - references/intake-workflow.md
+  - references/figure-contract.md
+  - references/language-and-text.md
+  - references/svg-output.md
+  - references/svg-fidelity-contract.md
+
+routes:
+  biomedical:
+    load:
+      - references/domain-masters.md
+      - references/biomedical-visual-archetypes.md
+      - references/color-and-proportion-system.md
+      - references/scientific-qa.md
+  materials_chemistry:
+    load:
+      - references/domain-masters.md
+      - references/scientific-qa.md
+  education_social_science:
+    load:
+      - references/domain-masters.md
+      - references/visual-qa.md
+  cs_ai:
+    load:
+      - references/domain-masters.md
+      - references/visual-qa.md
+  journal_submission:
+    load:
+      - references/journal-standards.md
+      - references/ai-artwork-policy.md
+      - references/visual-qa.md
+  reference_image:
+    load:
+      - references/reference-style-patch.md
+      - references/example-style-library.md
+      - references/color-and-proportion-system.md
+  image_generation:
+    load:
+      - references/prompt-template.md
+      - references/scientific-qa.md
+      - references/visual-qa.md
+      - references/svg-output.md
+  approved_raster_reconstruction:
+    load:
+      - references/editable-reconstruction.md
+      - references/svg-fidelity-contract.md
+      - references/svg-output.md
+  svg_delivery:
+    load:
+      - references/svg-output.md
+      - references/svg-fidelity-contract.md
+      - references/visual-qa.md
+
+priority:
+  - scientific_fact
+  - explicit_user_request
+  - evidence_boundary
+  - journal_policy
+  - domain_master
+  - figure_type
+  - model_adaptation
+  - aesthetics

@@ -1,0 +1,19 @@
+{
+  "purpose": "manuscript_figure",
+  "aspect_ratio": "16:9",
+  "style": "biorender_like",
+  "palette": "biomedical_blue_purple_pink",
+  "language": "zh-CN",
+  "reference_image": {"present": true, "mode": "combined"},
+  "target_journal": null,
+  "core_conclusion": "pH响应纳米粒在酸性环境触发释药，诱导肿瘤细胞死亡并与免疫检查点阻断协同激活T细胞。",
+  "evidence_status": "mixed",
+  "output_formats": ["svg", "png"],
+  "density_level": "D2",
+  "title_policy": "none",
+  "inference": {
+    "ask_user": false,
+    "missing_high_impact_fields": [],
+    "reason": "用途、构图与输出均可从当前请求可靠推断。"
+  }
+}

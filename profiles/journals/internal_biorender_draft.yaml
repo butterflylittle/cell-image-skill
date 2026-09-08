@@ -1,0 +1,10 @@
+id: internal_biorender_draft
+purpose: concept_draft
+aspect_ratio_default: 16:9
+background: white
+style: clean_biomedical_vector_like
+text: controlled_exact_labels
+shadows: subtle_only
+status: internal_design_draft
+requires_scientific_review: true
+requires_policy_gate_before_submission: true

@@ -1,0 +1,10 @@
+id: science_style_main_figure
+verified: 2026-09-07
+scope_note: AAAS/Science Partner Journal style baseline; verify flagship Science separately.
+bitmap_dpi_min: 300
+diagram_formats: [PDF, EPS]
+symbol_pt_min: 6
+line_width_pt_min: 0.5
+title_in_figure: false
+avoid: [gridlines, red_green_as_only_code, colored_type, clutter]
+microscopy_scale_bar: required

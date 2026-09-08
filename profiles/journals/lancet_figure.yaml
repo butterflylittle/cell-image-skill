@@ -1,0 +1,9 @@
+id: lancet_figure
+verified: 2026-09-07
+prefer_vector: true
+vector_formats: [EPS, PS, PDF, SVG, AI]
+bitmap_photo_dpi: 300
+prefer_2d_over_3d: true
+emphasis: [legibility, contrasting_lines, editable_source, consistent_axes]
+note: The Lancet may redraw figures in-house; provide clear editable source.
+ai_artwork_status: verify_against_elsevier_and_journal

@@ -1,0 +1,8 @@
+name: biomed_multiscale_zoom
+use_for:
+  - multiscale_zoom
+scale_levels: [3, 4]
+max_scale_levels: 5
+zoom_connector: "dashed keyline / crop box"
+next_level_area_multiplier: [1.3, 2.2]
+rule: "final molecular/cellular inset must explain the mechanism, not serve as decoration"

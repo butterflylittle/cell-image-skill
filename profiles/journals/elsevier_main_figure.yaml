@@ -1,0 +1,16 @@
+id: elsevier_main_figure
+verified: 2026-09-07
+width_mm:
+  single: 90
+  one_half: 140
+  double: 190
+dpi:
+  halftone: 300
+  combination: 500
+  line_art: 1000
+color_space: RGB
+color_blind_safe: true
+captions_separate: usually
+ai_explanatory_images: permitted_with_conditions_and_disclosure
+ai_primary_research_images: not_permitted
+ai_graphical_abstract_general_image_generators: not_permitted

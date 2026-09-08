@@ -1,0 +1,12 @@
+id: cn_grant_a4
+verified: internal_profile
+width_mm: [160, 175]
+background: white
+vector_first: true
+font_pt:
+  title: [13, 15]
+  module: [10.5, 12]
+  label: [8.5, 10.5]
+  minimum: 7.5
+color_count: [4, 6]
+black_white_readable: true

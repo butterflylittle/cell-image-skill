@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cell-image.local/schemas/figure-intake.schema.json",
+  "title": "Cell Image Figure Intake",
+  "type": "object",
+  "required": ["purpose", "aspect_ratio", "style", "palette", "language", "output_formats", "inference"],
+  "properties": {
+    "purpose": {
+      "enum": ["manuscript_figure", "graphical_abstract", "proposal_framework", "presentation_overview", "educational_explainer", "review_figure", "internal_concept_draft"]
+    },
+    "aspect_ratio": {"type": "string", "minLength": 1},
+    "style": {"type": "string", "minLength": 1},
+    "palette": {"type": "string", "minLength": 1},
+    "language": {"enum": ["zh-CN", "en", "bilingual", "auto"]},
+    "reference_image": {
+      "type": ["object", "null"],
+      "properties": {
+        "present": {"type": "boolean"},
+        "mode": {"enum": ["layout", "palette", "rendering", "combined"]}
+      },
+      "additionalProperties": true
+    },
+    "target_journal": {"type": ["string", "null"]},
+    "core_conclusion": {"type": ["string", "null"]},
+    "evidence_status": {"enum": ["known", "mixed", "uncertain", "not_applicable"]},
+    "output_formats": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["svg", "png", "pdf", "pptx", "ai", "eps", "tiff"]}
+    },
+    "density_level": {"enum": ["D1", "D2", "D3", "D4"]},
+    "title_policy": {"enum": ["none", "optional", "required", "auto"]},
+    "inference": {
+      "type": "object",
+      "required": ["ask_user", "missing_high_impact_fields"],
+      "properties": {
+        "ask_user": {"type": "boolean"},
+        "missing_high_impact_fields": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "reason": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

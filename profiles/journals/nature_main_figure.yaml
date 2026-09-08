@@ -1,0 +1,16 @@
+id: nature_main_figure
+verified: 2026-09-07
+width_mm:
+  single: 89
+  double: 183
+max_height_mm: 170
+font_pt:
+  min: 5
+  max: 7
+panel_label_pt: 8
+font_family: [Arial, Helvetica]
+editable_text: required
+avoid: [colored_text, drop_shadow, decorative_icons, patterns, text_on_busy_background, overlapping_text]
+background: white
+ai_artwork_status: verify_required
+delivery_default_for_general_image_ai: internal_design_draft

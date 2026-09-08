@@ -1,0 +1,138 @@
+{
+  "core_conclusion": "pH-responsive nanoparticles trigger acidic drug release and support chemo-immunotherapy synergy.",
+  "artifact_purpose": "internal_concept_draft",
+  "domain": "biomedical",
+  "figure_type": "closed_loop",
+  "target_journal": null,
+  "journal_profile": "internal_biorender_draft",
+  "reading_order": "top_to_bottom",
+  "hero_element": "acid-triggered release → tumor death → antigen release → T-cell killing",
+  "zones": [
+    {
+      "id": "z1",
+      "role": "assembly",
+      "content": [
+        "raw materials",
+        "self-assembly",
+        "pH-responsive nanoparticle"
+      ]
+    },
+    {
+      "id": "z2",
+      "role": "intracellular mechanism",
+      "content": [
+        "tumor targeting",
+        "uptake",
+        "acidic release",
+        "chemotherapy",
+        "apoptosis"
+      ]
+    },
+    {
+      "id": "z3",
+      "role": "immune mechanism",
+      "content": [
+        "antigen release",
+        "checkpoint blockade",
+        "T-cell activation",
+        "tumor killing"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "np",
+      "label": "pH响应纳米粒",
+      "type": "nanoparticle",
+      "evidence": "SUPPORTED"
+    },
+    {
+      "id": "tumor",
+      "label": "肿瘤细胞",
+      "type": "cell",
+      "evidence": "CONTEXT"
+    },
+    {
+      "id": "drug",
+      "label": "化疗",
+      "type": "drug_effect",
+      "evidence": "SUPPORTED"
+    },
+    {
+      "id": "antigen",
+      "label": "肿瘤抗原释放",
+      "type": "antigen",
+      "evidence": "SUPPORTED"
+    },
+    {
+      "id": "tcell",
+      "label": "T细胞激活",
+      "type": "immune_cell",
+      "evidence": "SUPPORTED"
+    }
+  ],
+  "relations": [
+    {
+      "source": "np",
+      "target": "tumor",
+      "relation": "transports",
+      "evidence": "SUPPORTED",
+      "label": "肿瘤靶向"
+    },
+    {
+      "source": "drug",
+      "target": "antigen",
+      "relation": "drives",
+      "evidence": "SUPPORTED",
+      "label": "癌细胞凋亡"
+    },
+    {
+      "source": "antigen",
+      "target": "tcell",
+      "relation": "drives",
+      "evidence": "SUPPORTED",
+      "label": "免疫激活"
+    }
+  ],
+  "visible_text": [
+    "自组装",
+    "pH响应纳米粒",
+    "肿瘤靶向",
+    "入胞",
+    "酸性环境",
+    "释药",
+    "化疗",
+    "癌细胞凋亡",
+    "肿瘤抗原释放",
+    "免疫检查点阻断",
+    "T细胞激活",
+    "围剿肿瘤",
+    "化疗+免疫协同"
+  ],
+  "forbidden_content": [
+    "fake microscopy",
+    "invented p-values",
+    "unsupported receptors"
+  ],
+  "ai_policy_status": "VERIFY_REQUIRED",
+  "delivery_status": "INTERNAL_DESIGN_DRAFT",
+  "output_formats": [
+    "svg",
+    "png"
+  ],
+  "svg_mode": "hybrid_editable",
+  "layout_profile": "biomed_landscape_16x9",
+  "density_level": "D2",
+  "design_tokens": {
+    "aspect_ratio": "16:9",
+    "outer_margin_pct": 4,
+    "hero_area_pct": 68,
+    "supporting_area_pct": 22,
+    "main_hues": 5,
+    "high_saturation_accents": 2,
+    "panel_tints": 1,
+    "title_policy": "none",
+    "background": "#FFFFFF",
+    "text_color": "#1F2940"
+  }
+}
