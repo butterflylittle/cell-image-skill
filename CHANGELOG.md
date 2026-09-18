@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Reframed the project as scientific visualization infrastructure for AI agents.
+- Added real biomedical examples, Codex installation guidance, validation commands, integrity boundaries and a public roadmap to the README.
+- Added an Apache-2.0 license, contribution guide and Codex skill interface metadata.
+
 ## 2.4.0 — cell-image rename + Figure Intake
 
 - Skill renamed from `scientific-figure-generator` to `cell-image`.

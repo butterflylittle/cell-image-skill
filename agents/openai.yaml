@@ -1,0 +1,7 @@
+interface:
+  display_name: "Cell Image"
+  short_description: "Turn research content into constrained, editable scientific figures"
+  default_prompt: "Use $cell-image to turn my research content into a scientifically constrained, editable figure."
+
+policy:
+  allow_implicit_invocation: true
